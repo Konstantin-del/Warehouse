@@ -10,6 +10,9 @@ internal static class ClientConfiguration
 {
     internal static void ConfigureClient(this ModelBuilder builder)
     {
+        builder.Entity<Client>().Property(x => x.Id)
+            .IsRequired()
+            .ValueGeneratedOnAdd();
         builder.Entity<Client>().Property(x => x.Name)
             .IsRequired()
             .HasMaxLength(100);

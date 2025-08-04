@@ -7,5 +7,5 @@ public class IncomingDocument
 
     public int Number { get; set; }
 
-    public DateTime Date { get; set; }
+    public DateTimeOffset Date { get; set; }
 }

@@ -8,9 +8,11 @@ public class ShipmentDocument
 
     public int Number { get; set; }
 
-    public DateTime Date { get; set; }
+    public DateTimeOffset Date { get; set; }
 
     public string State { get; set; }
 
-    public Guid IdClient { get; set; }
+    public Guid ClientId { get; set; }
+
+    public Client Client { get; set; }
 }

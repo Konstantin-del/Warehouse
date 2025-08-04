@@ -10,4 +10,6 @@ public class Client
     public string Address { get; set; }
 
     public string State { get; set; }
+
+    public ShipmentDocument[]? Document { get; set; }
 }
