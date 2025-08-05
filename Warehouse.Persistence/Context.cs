@@ -7,7 +7,10 @@ namespace Warehouse.Persistence;
 public class Context : DbContext
 {
     public Context(DbContextOptions<Context> options) : base(options)
-    { }
+    { 
+        Database.EnsureCreated();
+        Console.WriteLine("her");
+    }
 
     public DbSet<Resource> Resources { get; set; }
     public DbSet<Balance> Balances { get; set; }

@@ -15,7 +15,7 @@ internal static class ShipmentDocumentConfiguration
             .ValueGeneratedOnAdd();
         builder.Entity<ShipmentDocument>()
             .Property(x => x.Number)
-            .IsRequired();\
+            .IsRequired();
         builder.Entity<ShipmentDocument>()
             .Property(x => x.Date)
             .IsRequired();
