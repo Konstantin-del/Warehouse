@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Warehouse.Persistence.Configurations;
 using Warehouse.Persistence.Entities;
+using Warehouse.Persistence.EntityConfigurations;
 
 namespace Warehouse.Persistence;
 
@@ -9,7 +9,6 @@ public class Context : DbContext
     public Context(DbContextOptions<Context> options) : base(options)
     { 
         Database.EnsureCreated();
-        Console.WriteLine("her");
     }
 
     public DbSet<Resource> Resources { get; set; }

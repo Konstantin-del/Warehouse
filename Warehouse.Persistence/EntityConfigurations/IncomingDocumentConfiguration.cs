@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Warehouse.Persistence.Entities;
 
-namespace Warehouse.Persistence.Configurations;
+namespace Warehouse.Persistence.EntityConfigurations;
 
 internal static class IncomingDocumentConfiguration
 {

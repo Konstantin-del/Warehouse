@@ -1,5 +1,6 @@
 ﻿
 
+using Warehouse.Persistence.Entities;
 using Warehouse.Persistence.Interfaces;
 using Warehouse.Persistence.Repositories;
 
@@ -15,7 +16,15 @@ public class RepositoryWrapper : IRepositoryWrapper
 
     private IIncomingDocumentRepository _incomingDocument; 
 
+    private IIncomingResourceRepository _incomingResource;
+
     private IResourceRepository _resource;
+
+    private IShipmentDocumentRepository _shipmentDocument;
+
+    private IShipmentResourceRepository _shipmentResource;
+
+    private IUnitRepository _unit;
 
     public IBalanceRepository Balance
     {
@@ -53,15 +62,63 @@ public class RepositoryWrapper : IRepositoryWrapper
         }
     }
 
+    public IIncomingResourceRepository IncomingResource
+    {
+        get
+        {
+            if(_incomingResource == null)
+            {
+                _incomingResource = new IncomingResourceRepository(_context);
+            }
+            return _incomingResource;
+        }
+    }
+
     public IResourceRepository Resource
     {
         get
         {
-            if( _resource == null)
+            if (_resource == null)
             {
                 _resource = new ResourceRepository(_context);
             }
             return _resource;
+        }
+    }
+
+    public IShipmentDocumentRepository ShipmentDocument
+    {
+        get
+        {
+            if (_shipmentDocument == null)
+            {
+                _shipmentDocument = new ShipmentDocumentRepository(_context);
+            }
+            return _shipmentDocument;
+        }
+    }
+
+    public IShipmentResourceRepository ShipmentResource;
+    {
+        get
+        {
+            if (_shipmentResource == null)
+            {
+                _shipmentResource = new ShipmentResourceRepository(_context);
+            }
+            return _shipmentResource;
+        }
+    }
+
+    public IUnitRepository Unit
+    {
+        get
+        {
+            if (_unit == null)
+            {
+                _unit = new UnitRepository(_context);
+            }
+            return _unit;
         }
     }
 
