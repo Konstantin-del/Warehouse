@@ -11,5 +11,5 @@ public class Client
 
     public string State { get; set; }
 
-    public ShipmentDocument[]? Document { get; set; }
+    public List<ShipmentDocument>? Document { get; set; }
 }

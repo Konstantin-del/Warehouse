@@ -127,8 +127,8 @@ public class RepositoryWrapper : IRepositoryWrapper
         _context = repositoryContext;
     }
 
-    public void Save()
+    public async Task SaveAsync()
     {
-        _context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
     }
 }

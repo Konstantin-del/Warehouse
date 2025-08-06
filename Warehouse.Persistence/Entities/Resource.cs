@@ -11,7 +11,7 @@ public class Resource
 
     public Balance? Balance { get; set; }
 
-    public IncomingResource[]? IncomingResource { get; set; }
+    public List<IncomingResource>? IncomingResource { get; set; }
 
-    public ShipmentResource[]? ShipmentResource { get; set; }
+    public List<ShipmentResource>? ShipmentResource { get; set; }
 }
